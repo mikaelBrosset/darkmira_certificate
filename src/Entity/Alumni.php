@@ -17,8 +17,8 @@ class Alumni
     public function __construct($email, $firstname, $lastname)
     {
         $this->email = $email;
-        $this->firstName = $firstname;
-        $this->lastName = $lastname;
+        $this->firstName = ucwords(strtolower($firstname));
+        $this->lastName = strtoupper($lastname);
 
         $value = [$email, $firstname, $lastname];
 
