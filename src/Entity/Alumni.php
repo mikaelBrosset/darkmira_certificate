@@ -18,7 +18,7 @@ class Alumni
     {
         $this->email = $email;
         $this->firstName = ucwords(strtolower($firstname));
-        $this->lastName = strtoupper($lastname);
+        $this->lastName  = strtoupper($lastname);
 
         $value = [$email, $firstname, $lastname];
 

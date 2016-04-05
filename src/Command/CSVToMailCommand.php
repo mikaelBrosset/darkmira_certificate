@@ -30,7 +30,11 @@ for ($i = 0; $i < count($import); $i++) {
 
     //$result = $dbAlumni->checkAlumni($import[$i]);
 
-    $saveData = $dbAlumni->saveAlumni($import[$i]);
+    $saveData = $dbAlumni->saveAlumni([
+        $alumni->getEmail(),
+        $alumni->getFirstName(),
+        $alumni->getLastName(),
+        $alumni->getRandomNumber()]);
 
     $savemail = $emailProcess->processEmail($import[$i]);
     //echo mail sent to ...
