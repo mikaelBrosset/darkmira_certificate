@@ -9,7 +9,14 @@ class FrontController
     public function showCertificate()
     {
         $DBAlumni = new DBAlumni();
-        $alumni   = $DBAlumni->getAlumni(htmlentities(strip_tags($_GET['nb'])));
+        $data  = $DBAlumni->getAlumni(htmlentities(strip_tags($_GET['nb'])));
+
+        $alumni = new Alumni(
+            $data['email'],
+            $data['firstname'],
+            $data['lastname'],
+            $data['uniqueid']
+        );
 
         $template = new RenderTemplate();
 

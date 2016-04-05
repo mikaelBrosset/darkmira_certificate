@@ -6,8 +6,8 @@
     </head>
     <body>
     CERTIFICADO <br>
-    <?php echo $values['firstname'] ?> <br>
-    <?php echo $values['lastname'] ?>
+    <?php echo $values->getFirstname() ?> <br>
+    <?php echo $values->getLastName() ?>
 
     </body>
 </html>
