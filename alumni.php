@@ -5,7 +5,7 @@
  */
 
 include 'autoload.php';
-//ini_set('display_errors', 1);
+include '../../app/parameters.php';
 
 $frontController = new FrontController();
 $frontController->showCertificate();
