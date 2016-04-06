@@ -15,7 +15,7 @@ class ImportCSV
     {
         $resultArray = [];
         if (($handle = fopen($csvPath, "r")) !== FALSE) {
-            while (($line = fgetcsv($handle, 0, CSVSEPARATOR)))
+            while (($line = fgetcsv($handle, 0, constant('CSVSEPARATOR'))))
             {
                 $resultArray[] = [$line[0], $line[1], $line[2]]; //email, lastname, firstname
             }

@@ -6,10 +6,6 @@
 
 class DBConnection
 {
-    const DBUSERNAME = 'root';
-    const DBPASSWORD = 'pich';
-    const DBHOST     = 'localhost';
-
     /**
      * @var PDO
      */
@@ -17,8 +13,8 @@ class DBConnection
 
     public function __construct()
     {
-        $dbdsn = 'mysql:host='. self::DBHOST .';dbname=alumni;charset=UTF8';
-        $this->connection = new PDO($dbdsn, self::DBUSERNAME, self::DBPASSWORD);
+        $dbdsn = 'mysql:host='. constant('DBHOST') .';dbname=alumni;charset=UTF8';
+        $this->connection = new PDO($dbdsn, constant('DBUSERNAME'), constant('DBPASSWORD'));
     }
 
     public function getConnection()
