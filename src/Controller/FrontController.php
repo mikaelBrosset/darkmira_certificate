@@ -20,7 +20,7 @@ class FrontController
 
         $template = new RenderTemplate();
 
-        if ($alumni) {
+        if ($data) {
             $template->render('certificate', $alumni);
 
         } else {

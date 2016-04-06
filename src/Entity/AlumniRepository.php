@@ -20,7 +20,7 @@ class AlumniRepository
             INSERT INTO alumni (email,lastname,firstname,uniqueid) VALUES (?,?,?,?) ";
     }
 
-    public function getAlumni()
+    public static function getAlumni()
     {
         return "
             SELECT email, firstname, lastname, uniqueid

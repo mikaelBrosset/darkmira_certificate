@@ -17,9 +17,13 @@ class DBAlumni extends AbstractDB
     {
         $sql = AlumniRepository::addAlumni();
 
-        $this->writeSql($sql, $values);
+        try {
+            $this->writeSql($sql, $values);
+            echo sprintf("Alumni %s %s written in DB \n", $values[1], $values[2]);
 
-        echo sprintf("Alumni %s %s written in DB \n", $values[1], $values[2]);
+        } catch (Exception $e) {
+            echo sprintf("Exception %s with alumni %s %s", $e, $values[1], $values[2]);
+        };
     }
 
     public function getAlumni($uniqueid)
