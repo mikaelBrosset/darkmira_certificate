@@ -9,6 +9,7 @@ h2
 }
 .mainWrapper
 {
+    padding: 40px;
     padding-bottom:35px;
     border: solid 1px gray;
     height:100%;
@@ -23,15 +24,15 @@ h2
 .inputTextWrapper
 {
     margin: 0 auto;
-    width: 260px;
+    width: 100%;
     height: 40px;
 }
 .inputText
 {
+    width:100%;
     font-size: 20px;
     border-radius: 1px 1px 1px 1px;
     border: solid 2px green;
-    padding:0px 0px 0px 10px;
     height:100%;
 }
 .submitWrapper
