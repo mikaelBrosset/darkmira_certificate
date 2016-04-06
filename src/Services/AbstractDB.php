@@ -10,7 +10,6 @@ abstract class AbstractDB
 
     public function __construct()
     {
-        require_once "DBConnection.php";
         $this->DBConnection = new DBConnection();
     }
 
