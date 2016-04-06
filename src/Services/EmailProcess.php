@@ -10,7 +10,14 @@ class EmailProcess
     {
         try {
             $message = $this->createEmail($values);
-            $this->sendEmail($message);
+
+            if ($this->sendEmail($message))
+            {
+                echo sprintf("Email sent to %s", $values[0]);
+
+            } else {
+                echo sprintf("ERROR Email failed to %s", $values[0]);
+            }
 
         } catch (Exception $e) {
             echo sprintf("There was a problem sending an email to %s", $values[0]);
@@ -35,6 +42,7 @@ class EmailProcess
         $transport = Swift_MailTransport::newInstance();
 
         $mailer = Swift_Mailer::newInstance($transport);
-        $mailer->send($message);
+
+        return $mailer->send($message);
     }
 }
