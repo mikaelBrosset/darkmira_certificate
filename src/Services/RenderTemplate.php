@@ -6,11 +6,15 @@
 
 class RenderTemplate
 {
-    public function render($templatePath, $values)
+    public function render($templatePath, $values, $string = 0)
     {
         if (file_exists(dirname(__DIR__)."/Templates/html/$templatePath.php")) {
 
             include dirname(__DIR__)."/Templates/html/$templatePath.php";
+
+            if ($string){
+                return $body;
+            }
         }
     }
 }
