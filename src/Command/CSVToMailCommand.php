@@ -26,6 +26,5 @@ for ($i = 0; $i < count($import); $i++) {
         $alumni->getRandomNumber()]);
 
     $savemail = $emailProcess->processEmail($import[$i]);
-    //echo mail sent to ...
 }
 
