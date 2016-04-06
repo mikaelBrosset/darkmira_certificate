@@ -13,10 +13,11 @@ define('CSVSEPARATOR', ',');
 
 //SWIFTMAILER
 define('SUBJECT', 'Subject');
-define('FROM', 'darkmira@darkmira.com');
-define('TRANSPORT', 'darkmira.com');
-define('TRANSPORT_USERNAME', 'username');
-define('TRANSPORT_PASSWORD', 'password');
+define('FROM', 'mbrosset@darkmira.com');
+define('HOST', 'localhost');
+define('TRANSPORT', 'mail');
+define('TRANSPORT_USERNAME', 'username'); //only if smtp as transport
+define('TRANSPORT_PASSWORD', 'password'); //only if smtp as transport
 
 //DB
 define('DBUSERNAME', 'root');
