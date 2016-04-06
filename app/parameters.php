@@ -20,6 +20,8 @@ define('TRANSPORT', 'mail');
 define('TRANSPORT_USERNAME', 'username'); //only if smtp as transport
 define('TRANSPORT_PASSWORD', 'password'); //only if smtp as transport
 
+define('CERTIFICATEBASEURL', 'http://darkmira.com/certificate/alumni.php?nb=');
+
 //DB
 define('DBUSERNAME', 'root');
 define('DBPASSWORD', 'pich');

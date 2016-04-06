@@ -26,13 +26,15 @@ class EmailProcess
 
     public function createEmail($values)
     {
+        $values[4] = constant('CERTIFICATEBASEURL').$values[3];
+
         $RenderTemplate = new RenderTemplate();
 
         $message = Swift_Message::newInstance()
             ->setSubject(constant('SUBJECT'))
             ->setFrom(constant('FROM'), constant('FROMNAME'))
             ->setTo($values[0])
-            ->setBody($RenderTemplate->render('mail', $values));
+            ->setBody($RenderTemplate->render('mail', $values, 1));
 
         return $message;
     }
