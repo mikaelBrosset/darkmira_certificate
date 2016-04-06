@@ -4,34 +4,8 @@
  * Email: m.brosset@darkmira.com
  */
 
-class DBAlumni
+class DBAlumni extends AbstractDB
 {
-    public $DBConnection;
-
-    public function __construct()
-    {
-        require_once "DBConnection.php";
-        $this->DBConnection = new DBConnection();
-    }
-
-    public function writeSql($sql, array $values)
-    {
-        $query = $this->DBConnection->getConnection()->prepare($sql);
-
-        $query->execute($values);
-
-        return $this->DBConnection->getConnection()->lastInsertId();
-    }
-
-    public function fetch1Sql($sql, array $values)
-    {
-        $query= $this->DBConnection->getConnection()->prepare($sql);
-        $query->execute($values);
-        $request = $query->fetch(PDO::FETCH_ASSOC);
-
-        return $request;
-    }
-
     public function checkAlumni(array $values)
     {
         $sql = AlumniRepository::checkAlumni();
