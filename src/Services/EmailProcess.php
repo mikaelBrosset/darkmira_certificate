@@ -16,7 +16,7 @@ class EmailProcess
                 echo sprintf("Email sent to %s \n", $values['email']);
 
             } else {
-                echo sprintf("ERROR Email failed to %s \n", $values['email']);
+                echo sprintf("ERROR Email failed to send to %s \n", $values['email']);
             }
 
         } catch (Exception $e) {
