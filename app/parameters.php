@@ -14,6 +14,7 @@ define('CSVSEPARATOR', ',');
 //SWIFTMAILER
 define('SUBJECT', 'Subject');
 define('FROM', 'mbrosset@darkmira.com');
+define('FROMNAME', 'Darkmira');
 define('HOST', 'localhost');
 define('TRANSPORT', 'mail');
 define('TRANSPORT_USERNAME', 'username'); //only if smtp as transport

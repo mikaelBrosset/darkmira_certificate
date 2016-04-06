@@ -8,6 +8,8 @@ include '../../autoload.php';
 include '../../app/parameters.php';
 require_once '../../vendor/swiftmailer-5.x/lib/swift_required.php';
 
+ini_set('display_errors', 1);
+
 $emailProcess = new EmailProcess();
 $importCSV    = new ImportCSV();
 $dbAlumni     = new DBAlumni();
@@ -25,6 +27,6 @@ for ($i = 0; $i < count($import); $i++) {
         $alumni->getLastName(),
         $alumni->getRandomNumber()]);
 
-    $savemail = $emailProcess->processEmail($import[$i]);
+    $email = $emailProcess->processEmail($import[$i]);
 }
 
