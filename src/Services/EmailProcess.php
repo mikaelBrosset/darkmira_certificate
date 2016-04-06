@@ -13,27 +13,27 @@ class EmailProcess
 
             if ($this->sendEmail($message))
             {
-                echo sprintf("Email sent to %s \n", $values[0]);
+                echo sprintf("Email sent to %s \n", $values['email']);
 
             } else {
-                echo sprintf("ERROR Email failed to %s \n", $values[0]);
+                echo sprintf("ERROR Email failed to %s \n", $values['email']);
             }
 
         } catch (Exception $e) {
-            echo sprintf("There was a problem sending an email to %s \n", $values[0]);
+            echo sprintf("There was a problem sending an email to %s \n", $values['email']);
         }
     }
 
     public function createEmail($values)
     {
-        $values[4] = constant('CERTIFICATEBASEURL').$values[3];
+        $values['url'] = constant('CERTIFICATEBASEURL').$values['uniqueid'];
 
         $RenderTemplate = new RenderTemplate();
 
         $message = Swift_Message::newInstance()
             ->setSubject(constant('SUBJECT'))
             ->setFrom(constant('FROM'), constant('FROMNAME'))
-            ->setTo($values[0])
+            ->setTo($values['email'])
             ->setBody($RenderTemplate->render('mail', $values, 1));
 
         return $message;

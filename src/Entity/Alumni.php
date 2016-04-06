@@ -16,9 +16,9 @@ class Alumni
 
     public function __construct($email, $firstname, $lastname, $randomNumber = null)
     {
-        $this->email = $email;
-        $this->firstName = ucwords(strtolower($firstname));
-        $this->lastName  = strtoupper($lastname);
+        $this->email     = trim($email);
+        $this->firstName = trim(ucwords(strtolower($firstname)));
+        $this->lastName  = trim(strtoupper($lastname));
 
         if (is_null($randomNumber)) {
             $value = [$email, $firstname, $lastname];
