@@ -3,4 +3,4 @@ CSV to import has to be located in /Resources and named import.csv (path can be 
 
 form url = host/form.php
 
-certificate url = host/alumni.php
+certificate url = host/alumni.php?nb=...
