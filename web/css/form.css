@@ -4,5 +4,52 @@ body
 }
 h2
 {
-    color:green;
+    text-align: center;
+    color: green;
+}
+.mainWrapper
+{
+    padding-bottom:35px;
+    border: solid 1px gray;
+    height:100%;
+    width: 70%;
+    margin: 0 auto;
+}
+.formWrapper
+{
+    margin: 0 auto;
+    width: 50%;
+}
+.inputTextWrapper
+{
+    margin: 0 auto;
+    width: 260px;
+    height: 40px;
+}
+.inputText
+{
+    font-size: 20px;
+    border-radius: 1px 1px 1px 1px;
+    border: solid 2px green;
+    padding:0px 0px 0px 10px;
+    height:100%;
+}
+.submitWrapper
+{
+    margin: 0 auto;
+    margin-top:20px;
+    height:60px;
+    width:150px;
+}
+.validButton
+{
+
+    height:100%;
+    width:100%;
+    border: solid 0px;
+    color:white;
+    cursor: pointer;
+    font-size:20px;
+    border-radius: 1px 1px 1px 1px;
+    background-color: green;
 }
