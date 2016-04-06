@@ -9,7 +9,15 @@ class AlumniRepository
     public static function addAlumni()
     {
         return
-            "INSERT INTO alumni (email,lastname,firstname,uniqueid) VALUES (?,?,?,?) ";
+            "CREATE TABLE IF NOT EXISTS alumni (
+                    id int NOT NULL AUTO_INCREMENT,
+                    email varchar(255) NOT NULL,
+                    firstname varchar(255),
+                    lastname varchar(255),
+                    uniqueid varchar(255) NOT NULL,
+                    primary key (id)
+                );
+            INSERT INTO alumni (email,lastname,firstname,uniqueid) VALUES (?,?,?,?) ";
     }
 
     public static function checkAlumni()
