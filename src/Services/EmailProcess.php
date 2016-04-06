@@ -13,14 +13,14 @@ class EmailProcess
 
             if ($this->sendEmail($message))
             {
-                echo sprintf("Email sent to %s", $values[0]);
+                echo sprintf("Email sent to %s \n", $values[0]);
 
             } else {
-                echo sprintf("ERROR Email failed to %s", $values[0]);
+                echo sprintf("ERROR Email failed to %s \n", $values[0]);
             }
 
         } catch (Exception $e) {
-            echo sprintf("There was a problem sending an email to %s", $values[0]);
+            echo sprintf("There was a problem sending an email to %s \n", $values[0]);
         }
     }
 
