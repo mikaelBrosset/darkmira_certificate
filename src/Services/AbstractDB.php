@@ -13,21 +13,23 @@ abstract class AbstractDB
         $this->DBConnection = new DBConnection();
     }
 
-    public function writeSql($sql, array $values)
+    /**
+     * @param $bindMethodName
+     * @param $fetchMethod
+     * @param $sql
+     * @param array $values
+     *
+     * @return mixed
+     */
+    public function dbCall($bindMethodName, $fetchMethod, $sql, array $values)
     {
         $query = $this->DBConnection->getConnection()->prepare($sql);
+        $this->$bindMethodName($query, $values);
 
-        $query->execute($values);
+        call_user_func(array($this, $bindMethodName), $query, $values);
 
-        return $this->DBConnection->getConnection()->lastInsertId();
-    }
+        $query->execute();
 
-    public function fetch1Sql($sql, array $values)
-    {
-        $query= $this->DBConnection->getConnection()->prepare($sql);
-        $query->execute($values);
-        $request = $query->fetch(PDO::FETCH_ASSOC);
-
-        return $request;
+        return $this->dbfetch($fetchMethod, $query);
     }
 }

@@ -4,34 +4,38 @@
  * Email: m.brosset@darkmira.com
  */
 
-class DBAlumni extends AbstractDB
+class DBAlumni extends AbstractBinder
 {
-    public function checkAlumni(array $values)
-    {
-        $sql = AlumniRepository::checkAlumni();
-
-        return $this->fetch1Sql($sql, [$values[0], $values[3]]);
-    }
-
+    /**
+     * @param array $values
+     */
     public function saveAlumni(array $values)
     {
         $sql = AlumniRepository::addAlumni();
 
         try {
-            $this->writeSql($sql, $values);
-            echo sprintf("Alumni %s %s written in DB \n", $values[1], $values[2]);
+            $this->dbCall('bindQuerySaveAlumni', 'writeOne', $sql, $values);
+            //$this->writeSql($sql, $values);
+            echo sprintf("Alumni %s %s written in DB \n", $values['firstname'], $values['lastname']);
 
         } catch (Exception $e) {
-            echo sprintf("Exception %s with alumni %s %s", $e, $values[1], $values[2]);
+            echo sprintf("Exception %s with alumni %s %s", $e, $values['firstname'], $values['lastname']);
         };
     }
 
+    /**
+     * @param $uniqueid
+     * @return mixed
+     */
     public function getAlumni($uniqueid)
     {
-        //require_once "../Entity/AlumniRepository.php";
-
         $sql = AlumniRepository::getAlumni();
 
-        return $this->fetch1Sql($sql, [$uniqueid]);
+        try {
+            return $this->dbCall('bindQueryGetAlumni', 'fetchOne', $sql, ['uniqueid' => $uniqueid]);
+
+        } catch (Exception $e) {
+            echo "Ooops !! \n Something bad happened. \n Sorry for the inconvenience, please feel free to report this problem to Darkmira \n";
+        }
     }
 }
