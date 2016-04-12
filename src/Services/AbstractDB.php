@@ -13,31 +13,23 @@ abstract class AbstractDB
         $this->DBConnection = new DBConnection();
     }
 
-    public function writeSql($sql, array $values)
+    /**
+     * @param $bindMethodName
+     * @param $fetchMethod
+     * @param $sql
+     * @param array $values
+     *
+     * @return mixed
+     */
+    public function dbCall($bindMethodName, $fetchMethod, $sql, array $values)
     {
         $query = $this->DBConnection->getConnection()->prepare($sql);
+        $this->$bindMethodName($query, $values);
 
-        $this->bindSaveAlumni($query, $values);
+        call_user_func(array($this, $bindMethodName), $query, $values);
 
         $query->execute();
 
-        return $query->fetch(PDO::FETCH_ASSOC);
-    }
-
-    public function fetch1Sql($sql, array $values)
-    {
-        $query= $this->DBConnection->getConnection()->prepare($sql);
-        $query->execute($values);
-        $request = $query->fetch(PDO::FETCH_ASSOC);
-
-        return $request;
-    }
-
-    public function bindSaveAlumni($query, $values)
-    {
-        $query->bindValue(':email'    , $values['email'],     PDO::PARAM_STR);
-        $query->bindValue(':firstname', $values['firstname'], PDO::PARAM_STR);
-        $query->bindValue(':lastname' , $values['lastname'],  PDO::PARAM_STR);
-        $query->bindValue(':uniqueid' , $values['uniqueid'],  PDO::PARAM_STR);
+        return $this->dbfetch($fetchMethod, $query);
     }
 }

@@ -51,6 +51,6 @@ class AlumniRepository
         return "
             SELECT email, firstname, lastname, uniqueid
             FROM alumni
-            WHERE uniqueid = ?";
+            WHERE uniqueid = :uniqueid";
     }
 }
