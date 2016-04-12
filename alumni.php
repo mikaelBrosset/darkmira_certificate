@@ -7,9 +7,6 @@
 include 'autoload.php';
 include 'app/parameters.php';
 
-
-error_reporting(E_ALL);
-
 $frontController = new FrontController();
 $frontController->showCertificate();
 
