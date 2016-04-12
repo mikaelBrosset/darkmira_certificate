@@ -31,6 +31,6 @@ for ($i = 0; $i < count($import); $i++) {
 
 
     //Send Email to one Alumni
-    //$email = $emailProcess->processEmail($alumniHydrated);
+    $email = $emailProcess->processEmail($alumniHydrated);
 }
 
