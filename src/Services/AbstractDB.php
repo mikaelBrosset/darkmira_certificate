@@ -17,9 +17,11 @@ abstract class AbstractDB
     {
         $query = $this->DBConnection->getConnection()->prepare($sql);
 
-        $query->execute($values);
+        $this->bindSaveAlumni($query, $values);
 
-        return $this->DBConnection->getConnection()->lastInsertId();
+        $query->execute();
+
+        return $query->fetch(PDO::FETCH_ASSOC);
     }
 
     public function fetch1Sql($sql, array $values)
@@ -29,5 +31,13 @@ abstract class AbstractDB
         $request = $query->fetch(PDO::FETCH_ASSOC);
 
         return $request;
+    }
+
+    public function bindSaveAlumni($query, $values)
+    {
+        $query->bindValue(':email'    , $values['email'],     PDO::PARAM_STR);
+        $query->bindValue(':firstname', $values['firstname'], PDO::PARAM_STR);
+        $query->bindValue(':lastname' , $values['lastname'],  PDO::PARAM_STR);
+        $query->bindValue(':uniqueid' , $values['uniqueid'],  PDO::PARAM_STR);
     }
 }
