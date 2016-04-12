@@ -19,13 +19,6 @@ for ($i = 0; $i < count($import); $i++) {
 
     $alumni = new Alumni($import[$i][0], $import[$i][1], $import[$i][2]);
 
-    //Save to Database one Alumni
-    $dbAlumni->saveAlumni([
-        $alumni->getEmail(),
-        $alumni->getFirstName(),
-        $alumni->getLastName(),
-        $alumni->getRandomNumber()]);
-
     $alumniHydrated = [
         'email'     => $alumni->getEmail(),
         'firstname' => $alumni->getFirstName(),
@@ -33,7 +26,11 @@ for ($i = 0; $i < count($import); $i++) {
         'uniqueid'  => $alumni->getRandomNumber()
     ];
 
+    //Save to Database one Alumni
+    $dbAlumni->saveAlumni($alumniHydrated);
+
+
     //Send Email to one Alumni
-    $email = $emailProcess->processEmail($alumniHydrated);
+    //$email = $emailProcess->processEmail($alumniHydrated);
 }
 
