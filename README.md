@@ -1,6 +1,6 @@
 # Darkmira Validation Certificate
 
-*This project has been created for Darkmira: [www.darkmira.fr](https://www.darkmira.fr).*
+*This project has been created for Darkmira: [www.darkmira.fr](http://www.darkmira.fr).*
 
 It provides the alumnis with confirmation informations about the Darkmira test or training lessons they attended.
 
