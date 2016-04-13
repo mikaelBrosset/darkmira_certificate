@@ -26,4 +26,4 @@ define('CERTIFICATEBASEURL', 'http://darkmira.com/certificate/alumni.php?nb=');
 define('DBUSERNAME', 'root');
 define('DBPASSWORD', 'pich');
 define('DBHOST', 'localhost');
-
+define('DBNAME', 'alumni');
