@@ -4,7 +4,7 @@
  * Email: m.brosset@darkmira.com
  */
 
-abstract class AbstractBinder extends AbstractDB
+abstract class AbstractBinder extends DBConnection
 {
     /**
      * The fetch method from PDO
@@ -13,14 +13,14 @@ abstract class AbstractBinder extends AbstractDB
      * @param $query
      * @return string
      */
-    public function dbfetch($fetchMethod, $query)
+    public function dbfetch($fetchMethod, PDOStatement $query)
     {
         try {
             switch ($fetchMethod){
                 case 'fetchOne':
                     return $query->fetch(PDO::FETCH_ASSOC);
                 case 'writeOne':
-                    return $this->DBConnection->getConnection()->lastInsertId();
+                    return $this->getConnection()->lastInsertId();
                 default:
                     throw new Exception('fetchMethod must be provided');
             }
@@ -46,6 +46,16 @@ abstract class AbstractBinder extends AbstractDB
      * @param $values
      */
     public function bindQueryGetAlumni($query, $values)
+    {
+        $query->bindValue(':uniqueid', $values['uniqueid'], PDO::PARAM_STR);
+    }
+
+    public function bindQueryCheckEmail($query, $values)
+    {
+        $query->bindValue(':email'   , $values['email']   , PDO::PARAM_STR);
+    }
+
+    public function bindQueryCheckUniqueId($query, $values)
     {
         $query->bindValue(':uniqueid', $values['uniqueid'], PDO::PARAM_STR);
     }

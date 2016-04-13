@@ -19,21 +19,6 @@ class AlumniRepository
                 primary key (id)
                 );
 
-            SELECT
-              CASE alumni.email
-               WHEN :email
-               THEN 'emailAlreadyRegistered'
-              ELSE NULL
-              END AS 'emailError',
-              CASE alumni.uniqueid
-               WHEN :uniqueid
-               THEN 'uniqueIdAlreadyRegistered'
-              ELSE NULL
-              END AS 'uniqueIdError'
-            FROM alumni
-            WHERE alumni.email = :email
-            LIMIT 0, 1;
-
             INSERT INTO alumni (email,lastname,firstname,uniqueid)
 
               SELECT * FROM (SELECT :email, :firstname, :lastname, :uniqueid) AS tmp
@@ -52,5 +37,25 @@ class AlumniRepository
             SELECT email, firstname, lastname, uniqueid
             FROM alumni
             WHERE uniqueid = :uniqueid";
+    }
+
+    public static function checkEmail()
+    {
+        return "
+            SELECT alumni.email
+            FROM alumni
+            WHERE alumni.email = :email
+            LIMIT 0, 1;
+        ";
+    }
+
+    public static function checkUniqueId()
+    {
+        return "
+            SELECT alumni.uniqueid
+            FROM alumni
+            WHERE alumni.uniqueid = :uniqueid
+            LIMIT 0, 1;
+        ";
     }
 }

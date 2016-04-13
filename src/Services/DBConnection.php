@@ -13,7 +13,7 @@ class DBConnection
 
     public function __construct()
     {
-        $dbdsn = 'mysql:host='. constant('DBHOST') .';dbname=alumni;charset=UTF8';
+        $dbdsn = 'mysql:host=' . constant('DBHOST') . ';dbname='. constant('DBNAME') . ';charset=UTF8';
         $this->connection = new PDO($dbdsn, constant('DBUSERNAME'), constant('DBPASSWORD'));
     }
 

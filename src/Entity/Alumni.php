@@ -6,13 +6,15 @@
 
 class Alumni
 {
-    public $email;
+    private $email;
 
-    public $firstName;
+    private $firstName;
 
-    public $lastName;
+    private $lastName;
 
-    public $randomNumber;
+    private $randomNumber;
+
+    private $url;
 
     public function __construct($email, $firstname, $lastname, $randomNumber = null)
     {
@@ -21,13 +23,18 @@ class Alumni
         $this->lastName  = trim(strtoupper($lastname));
 
         if (is_null($randomNumber)) {
-            $value = [$email, $firstname, $lastname];
-            $this->randomNumber = substr(mt_rand(100, 999) . md5($value[mt_rand(0, 2)]), 0, 8);
+            $this->createRandomNumber();
 
         } else {
             $this->randomNumber = $randomNumber;
         }
 
+    }
+
+    public function createRandomNumber()
+    {
+        $value = [$this->email, $this->firstName, $this->lastName];
+        $this->randomNumber = substr(mt_rand(100, 999) . md5($value[mt_rand(0, 2)]), 0, 8);
     }
 
     public function getEmail()
@@ -48,5 +55,17 @@ class Alumni
     public function getRandomNumber()
     {
         return $this->randomNumber;
+    }
+
+    public function setUrl($url)
+    {
+        $this->url = $url;
+
+        return $this;
+    }
+
+    public function getUrl()
+    {
+        return $this->url;
     }
 }

@@ -4,8 +4,8 @@
  * Email: m.brosset@darkmira.com
  */
 
-include 'autoload.php';
-include 'app/parameters.php';
+include '../autoload.php';
+include '../app/parameters.php';
 
 $frontController = new FrontController();
 $frontController->showCertificate();

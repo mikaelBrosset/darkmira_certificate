@@ -6,7 +6,7 @@
 
 class RenderTemplate
 {
-    public function render($templatePath, $values, $string = 0)
+    public function render($templatePath, $alumni, $string = 0)
     {
         if (file_exists(dirname(__DIR__)."/Templates/html/$templatePath.php")) {
 

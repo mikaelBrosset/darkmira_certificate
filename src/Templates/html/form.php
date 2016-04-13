@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Darkmira Form</title>
-    <link rel="stylesheet" href="web/css/form.css"
+    <link rel="stylesheet" href="../web/css/form.css"
 </head>
 <body>
 <div class="mainWrapper">
