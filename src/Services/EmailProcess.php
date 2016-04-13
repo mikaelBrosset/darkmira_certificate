@@ -6,35 +6,35 @@
 
 class EmailProcess
 {
-    public function processEmail($values)
+    public function processEmail(Alumni $alumni)
     {
         try {
-            $message = $this->createEmail($values);
+            $message = $this->createEmail($alumni);
 
             if ($this->sendEmail($message))
             {
-                echo sprintf("Email sent to %s \n", $values['email']);
+                echo sprintf("Email sent to %s \n", $alumni->getEmail());
 
             } else {
-                echo sprintf("ERROR Email failed to send to %s \n", $values['email']);
+                echo sprintf("ERROR Email failed to send to %s \n", $alumni->getEmail());
             }
 
         } catch (Exception $e) {
-            echo sprintf("There was a problem sending an email to %s \n", $values['email']);
+            echo sprintf("There was a problem sending an email to %s \n", $alumni->getEmail());
         }
     }
 
-    public function createEmail($values)
+    public function createEmail(Alumni $alumni)
     {
-        $values['url'] = constant('CERTIFICATEBASEURL').$values['uniqueid'];
+        $alumni->setUrl(constant('CERTIFICATEBASEURL').$alumni->getRandomNumber());
 
         $RenderTemplate = new RenderTemplate();
 
         $message = Swift_Message::newInstance()
             ->setSubject(constant('SUBJECT'))
             ->setFrom(constant('FROM'), constant('FROMNAME'))
-            ->setTo($values['email'])
-            ->setBody($RenderTemplate->render('mail', $values, 1));
+            ->setTo($alumni->getEmail())
+            ->setBody($RenderTemplate->render('mail', $alumni, 1));
 
         return $message;
     }
