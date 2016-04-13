@@ -12,8 +12,8 @@ define('CSVSEPARATOR', ',');
 
 
 //SWIFTMAILER
-define('SUBJECT', 'Subject');
-define('FROM', 'mbrosset@darkmira.com');
+define('SUBJECT', 'Darkmira Tour PHP 2016');
+define('FROM', 'cgrandval@darkmira.com');
 define('FROMNAME', 'Darkmira');
 define('HOST', 'localhost');
 define('TRANSPORT', 'mail');

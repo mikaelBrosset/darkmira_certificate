@@ -1,37 +1,67 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto%20Condensed');
 body
 {
-    font-family: "Verdana", "Geneva", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
 }
-.darkmiraImage
-{
-    height: 50px;
-    background-color: green;
+.darkmiraImage {
+    display: block;
+    height:300px;
+    width:900px;
+    background-color: lightgrey;
+    background-image: url("../media/index-certificate.png");
+    background-repeat: no-repeat;
+    margin:0 auto;
 }
 .mainWrapper
 {
     height:100px;
-    width:80%;
+    width:900px;
     margin: 0 auto;
 }
 h1
 {
     text-align: center;
-    font-size: 50px;
-    color: darkgreen;
+    font-size: 40px;
 }
 h2
 {
     text-align: center;
     font-size: 30px;
-    color: darkgreen;
+    color: #289948;
 }
 .secondaryText
+{
+    text-align: center;
+    font-size: 30px;
+}
+.tertiaryText
 {
     text-align: center;
     font-size: 20px;
 }
 .smallTitle
 {
-    color: green;
+    color: #289948;
     font-weight: bold;
+}
+.signatureWrap
+{
+    heigth: 700px;
+
+    //background-color:red;
+    margin-bottom: 70px;
+}
+.signatureBlock
+{
+    margin: 0px 80px 0px 80px;
+    width:30%;
+    height: 150px;
+    display: inline-block;
+    vertical-align: top;
+    background-color:pink;;
+}
+.signatureNames
+{
+    font-size: 20px;
+    text-align: center;
 }

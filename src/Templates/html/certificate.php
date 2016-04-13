@@ -2,17 +2,44 @@
     <html lang="en">
     <head>
         <meta charset="UTF-8">
-        <title>Darkmira Certficate</title>
+        <title>Darkmira Tour PHP 2016</title>
         <link rel="stylesheet" href="../web/css/certificate.css"
     </head>
     <body>
-    <div class="darkmiraImage"></div>
+    <div class="imageWrapper">
+        <div class="darkmiraImage"></div>
+    </div>
+
     <div class="mainWrapper">
         <h1>CERTIFICADO</h1>
         <p class="secondaryText">
-            Certifica que <span class="smallTitle"><?php echo $alumni->getFirstname().' '. $alumni->getLastName() ?></span> participou do <span class="smallTitle">DARKMIRA</span>,</br>
-            com carga horària de 8 horas.
+            Certificamos que <span class="smallTitle"><?php echo $alumni->getFirstname().' '. $alumni->getLastName() ?></span> participou do <span class="smallTitle">DARKMIRA Tour 2016 </span> ocorrido nos dias 19 e 20 de Março 2016, na Universidade Católica de Brasília.
+
         </p>
+        <p class="tertiaryText">
+            Carga horària de 8 horas.
+        </p>
+
+        <div class="signatureWrap">
+            <div class="signatureBlock">
+                <img>
+                <hr>
+                <div class="signatureNames">
+                    Frédéric BAILLON<br>
+                    CEO Darkmira
+                </div>
+            </div>
+
+
+            <div class="signatureBlock">
+                <img>
+                <hr>
+                <div class="signatureNames">
+                    Cyrille GRANDVAL<br>
+                    CEO Darkmira Brazil
+                </div>
+            </div>
+        </div>
     </div>
     </body>
 </html>

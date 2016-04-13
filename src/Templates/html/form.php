@@ -8,7 +8,7 @@
 <body>
 <div class="mainWrapper">
     <h2>
-        Please, enter the unique number you received by email
+        Por favor, digite o número que você recebeu por email
     </h2>
     <div class="formWrapper">
         <form method="GET" action="alumni.php">
