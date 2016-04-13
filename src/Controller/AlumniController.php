@@ -20,7 +20,7 @@ class AlumniController
             $alumni = new Alumni($import[$i][0], $import[$i][1], $import[$i][2]);
 
             //Check Alumni
-            if (!$alumniProcess->checkAlumni($alumni)) { continue; };
+            if (!$alumniProcess->checkAlumni($alumni)) { continue; }
 
             //Save to Database one Alumni
             $alumniProcess->saveAlumniProcess($alumni);

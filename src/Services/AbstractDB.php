@@ -18,7 +18,6 @@ abstract class AbstractDB extends AbstractBinder
     {
         $query = $this->getConnection()->prepare($sql);
         $this->$bindMethodName($query, $values);
-
         call_user_func(array($this, $bindMethodName), $query, $values);
         $query->execute();
 

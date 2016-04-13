@@ -11,6 +11,8 @@ class AlumniProcess extends DBAlumni
         if (!$this->checkEmail($alumni)) { return false; };
 
         $this->checkUniqueId($alumni);
+
+        return true;
     }
 
     public function checkEmail(Alumni $alumni)
@@ -19,7 +21,7 @@ class AlumniProcess extends DBAlumni
             echo sprintf("Email %s is already registered, skipping \n", $alumni->getEmail());
             return false;
         }
-        return;
+        return true;
     }
 
     public function checkUniqueId(Alumni $alumni)
@@ -29,7 +31,7 @@ class AlumniProcess extends DBAlumni
 
             $this->checkUniqueId($alumni);
         }
-        return;
+        return true;
     }
 
     public function saveAlumniProcess(Alumni $alumni)
