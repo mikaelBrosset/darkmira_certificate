@@ -4,7 +4,7 @@
  * Email: m.brosset@darkmira.com
  */
 
-class DBConnection
+abstract class DBConnection implements DBInterface
 {
     /**
      * @var PDO
