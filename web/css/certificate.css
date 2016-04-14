@@ -3,17 +3,22 @@ body
 {
     font-family: "Roboto Condensed", sans-serif;
     background-color:black;
-    background-image: url("../media/imgpsh_fullsize3.png");
-    background-repeat: no-repeat;
     color:white;
-    width: 842px;
 }
 .mainWrapper
+{
+    margin: 0 auto;
+    width: 842px;
+    height: 595px;
+    background-image: url("../media/imgpsh_fullsize3.png");
+    background-repeat: no-repeat;
+}
+.mainTextWrapper
 {
     width:700px;
     height:200px;
     margin: 0 auto;
-    margin-top: 150px;
+    padding-top: 130px;
 }
 h1
 {
@@ -47,8 +52,7 @@ h2
 .signatureWrap
 {
     heigth: 310px;
-
-    background-color:red;
+    //background-color:red;
     margin-bottom: 70px;
 }
 .signatureBlock
@@ -58,15 +62,24 @@ h2
     height: 160px;
     display: inline-block;
     vertical-align: top;
-    background-color:pink;;
+    //background-color:pink;;
 }
 .imageWrap
 {
-    background-color:orange;
+    //background-color:orange;
     height:100px;
 }
 .signatureNames
 {
+    padding-top: 10px;
     font-size: 15px;
     text-align: center;
+}
+.stroke
+{
+    margin-top: 10px;
+    display: block;
+    width:100%;
+    height: 2px;
+    background-color:#4D4D4D;
 }
