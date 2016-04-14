@@ -34,7 +34,7 @@ class EmailProcess
             ->setSubject(constant('SUBJECT'))
             ->setFrom(constant('FROM'), constant('FROMNAME'))
             ->setTo($alumni->getEmail())
-            ->setBody($RenderTemplate->render('mail', $alumni, 1));
+            ->setBody($RenderTemplate->render('mail', $alumni, 1), 'text/html');
 
         return $message;
     }
