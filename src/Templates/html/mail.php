@@ -88,11 +88,11 @@ $insideBody = <<<'INSIDEBODY'
 								<table width="100%%" cellpadding="0" cellspacing="0" border="0" style="border-collapse:collapse; border-spacing:0;">
 									<tr>
 										<td class="inner" style="padding-top:15px; padding-right:15px; padding-bottom:15px; padding-left:30px; font-family:'Roboto Condensed'; font-size:24px; line-height:100%%; color:#e94e1b; font-weight:normal;">
-											<img alt="Logo" src="https://certificado.darkmira.com/2016/media/logo.png" border="0" align="left" vspace="0" hspace="0" style="display:block;" />
+											<img alt="Logo" src="%3$s/media/logo.png" border="0" align="left" vspace="0" hspace="0" style="display:block;" />
 										</td>
 										<td class="socialIcons" style="padding-top:25px; padding-left:15px; padding-right:30px; padding-bottom:25px; font-family:'Roboto Condensed'; font-size:12px; line-height:15pt; color:#777777; text-align:right;">
-											<a href="https://twitter.com/DMTourPHPBrasil" target="blank"><img alt="Twitter" src="https://certificado.darkmira.com/2016/media/twitter.png" border="0" vspace="0" hspace="0" /></a>&nbsp;&nbsp;
-											<a href="https://www.facebook.com/dmtourbrasil" target="blank"><img alt="Facebook" src="https://certificado.darkmira.com/2016/media/facebook.png" border="0" vspace="0" hspace="0" /></a>&nbsp;&nbsp;
+											<a href="https://twitter.com/DMTourPHPBrasil" target="blank"><img alt="Twitter" src="%3$s/media/twitter.png" border="0" vspace="0" hspace="0" /></a>&nbsp;&nbsp;
+											<a href="https://www.facebook.com/dmtourbrasil" target="blank"><img alt="Facebook" src="%3$s/media/facebook.png" border="0" vspace="0" hspace="0" /></a>&nbsp;&nbsp;
 										</td>
 									</tr>
 								</table>
@@ -130,7 +130,7 @@ $insideBody = <<<'INSIDEBODY'
 
 <p style="color:#b5b5b5; font-family:'Roboto Condensed'; font-size:16px; font-weight: 300;">Além desse link, você também pode compartilhar o seu certificado com seu empregador ou para uma contratação, através do outro link abaixo com o numero do seu certificado %2$s</p>
 
-<p style="color:#b5b5b5; font-family:'Roboto Condensed'; font-size:16px; font-weight: 300;"><a style="color:#1c9547; text-decoration:underline;" href="https://certificado.darkmira.com/2016/">https://certificado.darkmira.com/2016/</a></p>
+<p style="color:#b5b5b5; font-family:'Roboto Condensed'; font-size:16px; font-weight: 300;"><a style="color:#1c9547; text-decoration:underline;" href="%4$s">%4$s</a></p>
 
 <p style="color:#b5b5b5; font-family:'Roboto Condensed'; font-size:16px; font-weight: 300;">Lembramos que o Darkmira Tour PHP não se limite aos dias do evento e que continuamos a propor para você hangouts, interviews, informações sobre eventos comunitários, sorteios, etc, no nosso  <a style="color:#1c9547; text-decoration:underline;" href="https://www.facebook.com/dmtourbrasil">Facebook</a>, <a style="color:#1c9547; text-decoration:underline;" href="https://twitter.com/DMTourPHPBrasil">Twitter</a> mas também no nosso canal slack #dmtourphp, <a style="color:#1c9547; text-decoration:underline;" href="https://darkmirabrasil.herokuapp.com/">https://darkmirabrasil.herokuapp.com/</a></p>
 
@@ -156,9 +156,9 @@ $insideBody = <<<'INSIDEBODY'
 									</tr>
 									<tr>
 										<td class="inner2" style="text-align: center; font-family:'Roboto Condensed'; font-size:12px; line-height:15pt; color:#777777;">
-											<img alt="Logo" src="https://certificado.darkmira.com/2016/media/logo-microsoft.png" border="0" vspace="0" hspace="0" />
-											<img alt="Logo" src="https://certificado.darkmira.com/2016/media/logo-kinghost.png" border="0" vspace="0" hspace="0" />
-											<img alt="Logo" src="https://certificado.darkmira.com/2016/media/logo-continuous.png" border="0"  vspace="0" hspace="0" />
+											<img alt="Logo" src="%3$s/media/logo-microsoft.png" border="0" vspace="0" hspace="0" />
+											<img alt="Logo" src="%3$s/media/logo-kinghost.png" border="0" vspace="0" hspace="0" />
+											<img alt="Logo" src="%3$s/media/logo-continuous.png" border="0"  vspace="0" hspace="0" />
 										</td>
 									</tr>
 								</table>
@@ -172,14 +172,14 @@ $insideBody = <<<'INSIDEBODY'
 									</tr>
 									<tr>
 										<td class="inner2" style="padding-bottom: 20px;">
-											<img alt="Logo" src="https://certificado.darkmira.com/2016/media/logo-dmb.png" border="0" vspace="0" hspace="0" />
+											<img alt="Logo" src="%3$s/media/logo-dmb.png" border="0" vspace="0" hspace="0" />
 										</td>
 									</tr>
 									<tr>
 										<td class="socialIcons">
-											<a href="https://twitter.com/DarkmiraBrasil" target="blank"><img alt="Twitter" src="https://certificado.darkmira.com/2016/media/twitter.png" border="0" vspace="0" hspace="0" /></a>&nbsp;&nbsp;
-											<a href="https://www.facebook.com/darkmirabrasil" target="blank"><img alt="Facebook" src="https://certificado.darkmira.com/2016/media/facebook.png" border="0" vspace="0" hspace="0" /></a>&nbsp;&nbsp;
-											<a href="https://www.linkedin.com/company/3340355" target="blank"><img alt="Linkedin" src="https://certificado.darkmira.com/2016/media/linkedin.png" border="0" vspace="0" hspace="0" /></a>
+											<a href="https://twitter.com/DarkmiraBrasil" target="blank"><img alt="Twitter" src="%3$s/media/twitter.png" border="0" vspace="0" hspace="0" /></a>&nbsp;&nbsp;
+											<a href="https://www.facebook.com/darkmirabrasil" target="blank"><img alt="Facebook" src="%3$s/media/facebook.png" border="0" vspace="0" hspace="0" /></a>&nbsp;&nbsp;
+											<a href="https://www.linkedin.com/company/3340355" target="blank"><img alt="Linkedin" src="%3$s/media/linkedin.png" border="0" vspace="0" hspace="0" /></a>
 										</td>
 									</tr>
 								</table>
@@ -195,4 +195,4 @@ $insideBody = <<<'INSIDEBODY'
 </html>
 INSIDEBODY;
 
-$body = sprintf($insideBody, $alumni->getUrl(), $alumni->getRandomNumber());
+$body = sprintf($insideBody, $alumni->getUrl(), $alumni->getRandomNumber(), constant('BASEURL'), constant('CERTIFICATEFORMURL'));

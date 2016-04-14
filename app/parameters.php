@@ -17,10 +17,13 @@ define('FROM', 'cgrandval@darkmira.com');
 define('FROMNAME', 'Darkmira');
 define('HOST', 'localhost');
 define('TRANSPORT', 'mail');
-define('TRANSPORT_USERNAME', 'username'); //only if smtp as transport
-define('TRANSPORT_PASSWORD', 'password'); //only if smtp as transport
+//define('TRANSPORT_USERNAME', 'username'); //only if smtp as transport
+//define('TRANSPORT_PASSWORD', 'password'); //only if smtp as transport
 
-define('CERTIFICATEBASEURL', 'https://certificado.darkmira.com/2016/alumni.php?nb=');
+//HTML
+define('BASEURL', 'https://certificado.darkmira.com/2016');
+define('CERTIFICATEBASEURL', constant('BASEURL') . '/alumni.php?nb=');
+define('CERTIFICATEFORMURL', constant('BASEURL') . '/form.php');
 
 //DB
 define('DBUSERNAME', 'root');
