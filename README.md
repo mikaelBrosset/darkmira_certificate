@@ -1,11 +1,9 @@
 # Darkmira Validation Certificate
 
-*This project has been created for Darkmira: [www.darkmira.fr](http://www.darkmira.fr) in native PHP.*
+*This project has been created for Darkmira: [www.darkmira.fr](http://www.darkmira.fr) in __native PHP__.*
 
 *As the concerned event was Darkmira Tour PHP Brazil, the templates are indeed in portuguese.*
-
-It provides confirmation the alumnis attended the talks.
-
+*It provides confirmation the alumnis attended the talks.*
 
 
 cli command for import:
