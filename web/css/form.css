@@ -1,20 +1,22 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto%20Condensed');
 body
 {
-    font-family: "Verdana", "Geneva", sans-serif;
+    font-family: "Roboto Condensed", sans-serif;
 }
 h2
 {
     text-align: center;
-    color: green;
+    color: #FCCC04;
 }
 .mainWrapper
 {
     padding: 40px;
     padding-bottom:35px;
-    border: solid 1px gray;
     height:100%;
     width: 70%;
     margin: 0 auto;
+    background-image: url("../media/imgpsh_fullsize.png");
+    background-repeat: no-repeat;
 }
 .formWrapper
 {
@@ -32,7 +34,7 @@ h2
     width:100%;
     font-size: 20px;
     border-radius: 1px 1px 1px 1px;
-    border: solid 2px green;
+    border: solid 2px black;
     height:100%;
 }
 .submitWrapper
@@ -44,13 +46,25 @@ h2
 }
 .validButton
 {
-
     height:100%;
     width:100%;
     border: solid 0px;
     color:white;
     cursor: pointer;
     font-size:20px;
+    border: solid 1px white;
     border-radius: 1px 1px 1px 1px;
-    background-color: green;
+    background-color: rgba(0,0,0,0)
+}
+
+.validButton:hover
+{
+    color: #FCCC04;
+    border: solid 1px #FCCC04;
+    background-color: #302600;
+}
+.notFoundtext
+{
+    text-align: center;
+    color: red;
 }
