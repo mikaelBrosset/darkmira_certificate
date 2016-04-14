@@ -4,7 +4,9 @@
 
 *As the concerned event was Darkmira Tour PHP Brazil, the templates are indeed in portuguese.*
 
-It provides the alumnis with confirmation informations about the Darkmira test or training lessons they attended.
+It provides confirmation the alumnis attended the talks.
+
+
 
 cli command for import:
 >php path/to/Command/CSVToMailCommand.php
