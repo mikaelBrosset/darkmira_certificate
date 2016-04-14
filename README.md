@@ -5,7 +5,7 @@
 It provides the alumnis with confirmation informations about the Darkmira test or training lessons they attended.
 
 cli command for import:
->php path/to/Command/CSVToMailCommand
+>php path/to/Command/CSVToMailCommand.php
 
 
 CSV to import has to be located in (path can be changed in app/parameters.php):
