@@ -1,4 +1,4 @@
-# Darkmira Validation Certificate
+# __NOT MAINTAINED__ // Darkmira Validation Certificate // Native PHP
 
 *This project has been created for Darkmira: [www.darkmira.fr](http://www.darkmira.fr) in __native PHP__.*
 
